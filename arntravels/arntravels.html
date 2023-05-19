@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+     <!-- /* for link button style */ -->
+     <style>
+     
+   
+        .linkbutton {
+          display: inline-block;
+          border-radius: 4px;
+          background-color: #e73819;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 1.2vw;
+          padding: 10px;
+          width: 10vw;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 0px;
+        }
+        
+        .linkbutton span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+        
+        .linkbutton span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        
+        .linkbutton:hover span {
+          padding-right: 25px;
+        }
+        
+        .linkbutton:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+            </style>
+
+
+
+  <meta charset="utf-8">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="arntravelsstyle.css">
+</head>
+<body>
+
+    
+
+    <nav style="background-color: #e73819;">
+      <div style="max-width: 1200px;margin: auto;padding: 1.5rem 1rem;display: flex;align-items: center;justify-content: space-between;">
+        <div><h1 style="color: aliceblue">ARN Tours & Travels</h1></div>       
+      </div>
+    </nav>
+
+
+
+    <section style="background-color: rgb(255, 252, 252);">
+        <div class="section__container" style="min-height: 100vh;max-width: 1200px;margin: auto;padding: 1rem;display: grid;grid-template-columns: repeat(2, 1fr);gap: 4rem;">
+          <div style="display: flex;flex-direction: column;justify-content: center;font-size: 1.1vw;">
+            <h1>
+              About
+            </h1>
+            <br>
+            <p>
+              ARN tours and travels is a touring and travelling service provider. This website showcases various tour packages and vehicles
+              available.
+              
+            </p><br><br>
+
+            <button class="linkbutton" style="vertical-align:middle" onclick="visitsite()"><span>View site </span></button>
+            
+          </div>
+          <div style="display: grid; place-items: center;">
+            <img src="arntravels_res/arntravels1.png" alt="profile" style="width: min(75rem, 100%);border-radius: 5%;"/>
+          </div>
+        </div>
+      </section>
+    
+
+      
+
+      
+    
+
+    <section style="background-color: rgb(244, 244, 244);">
+      <br><br><br><br>
+      <br><br>
+      
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="arntravels_res/arntravels2.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="arntravels_res/arntravels3.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="arntravels_res/arntravels4.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="arntravels_res/arntravels5.png" style="width:100%">
+          <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="arntravels_res/arntravels6.png" style="width:100%">
+        <div class="text"></div>
+    </div>
+      
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+     
+        
+
+    </div>
+    <br><br><br>
+  </section>
+
+
+
+  <section style="background-color: rgb(255, 255, 255);">
+    <br><br><br><br>
+  <div style=" display: flex;
+  align-items: center;
+  justify-content: center;">
+  <div class="container show-controls">
+    <div class="wrapper">
+        <div class="video-timeline">
+            <div class="progress-area">
+                <span>00:00</span>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <ul class="video-controls">
+            <li class="options left">
+                <button class="volume"><i class="fa-solid fa-volume-high"></i></button>
+                <input type="range" min="0" max="1" step="any">
+                <div class="video-timer">
+                    <p class="current-time">00:00</p>
+                    <p class="separator"> / </p>
+                    <p class="video-duration">00:00</p>
+                </div>
+            </li>
+            <li class="options center">
+                <button class="skip-backward"><i class="fas fa-backward"></i></button>
+                <button class="play-pause"><i class="fas fa-play"></i></button>
+                <button class="skip-forward"><i class="fas fa-forward"></i></button>
+            </li>
+            <li class="options right">
+                <div class="playback-content">
+                    <button class="playback-speed"><span class="material-symbols-rounded">slow_motion_video</span></button>
+                    <ul class="speed-options">
+                        <li data-speed="2">2x</li>
+                        <li data-speed="1.5">1.5x</li>
+                        <li data-speed="1" class="active">Normal</li>
+                        <li data-speed="0.75">0.75x</li>
+                        <li data-speed="0.5">0.5x</li>
+                    </ul>
+                </div>
+                <button class="pic-in-pic"><span class="material-icons">picture_in_picture_alt</span></button>
+                <button class="fullscreen"><i class="fa-solid fa-expand"></i></button>
+            </li>
+        </ul>
+    </div>
+    <video src="arntravels_res/demo-video.mp4"></video>
+</div></div>
+<br><br><br><br>
+</section>
+
+
+
+<footer style="background-color: #e73819;text-align: center;
+padding:5rem 0;">
+            
+  <div class="copyright">
+      <p style="color:white;">Copyright 2020 © RedmindTechnologies. All rights reserved</p>
+  </div>
+</footer>
+
+<!-- script for image slider -->
+<script src="arntravelsscript.js"></script>    
+</body>
+</html>
+
+
+
+<!-- script for video player -->
+
+
+
+<script>
+    function visitsite(){
+    location.href='https://www.arntravels.com/';    
+}
+const container = document.querySelector(".container"),
+mainVideo = container.querySelector("video"),
+videoTimeline = container.querySelector(".video-timeline"),
+progressBar = container.querySelector(".progress-bar"),
+volumeBtn = container.querySelector(".volume i"),
+volumeSlider = container.querySelector(".left input");
+currentVidTime = container.querySelector(".current-time"),
+videoDuration = container.querySelector(".video-duration"),
+skipBackward = container.querySelector(".skip-backward i"),
+skipForward = container.querySelector(".skip-forward i"),
+playPauseBtn = container.querySelector(".play-pause i"),
+speedBtn = container.querySelector(".playback-speed span"),
+speedOptions = container.querySelector(".speed-options"),
+pipBtn = container.querySelector(".pic-in-pic span"),
+fullScreenBtn = container.querySelector(".fullscreen i");
+let timer;
+
+const hideControls = () => {
+    if(mainVideo.paused) return;
+    timer = setTimeout(() => {
+        container.classList.remove("show-controls");
+    }, 3000);
+}
+hideControls();
+
+container.addEventListener("mousemove", () => {
+    container.classList.add("show-controls");
+    clearTimeout(timer);
+    hideControls();   
+});
+
+const formatTime = time => {
+    let seconds = Math.floor(time % 60),
+    minutes = Math.floor(time / 60) % 60,
+    hours = Math.floor(time / 3600);
+
+    seconds = seconds < 10 ? `0${seconds}` : seconds;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+    hours = hours < 10 ? `0${hours}` : hours;
+
+    if(hours == 0) {
+        return `${minutes}:${seconds}`
+    }
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+videoTimeline.addEventListener("mousemove", e => {
+    let timelineWidth = videoTimeline.clientWidth;
+    let offsetX = e.offsetX;
+    let percent = Math.floor((offsetX / timelineWidth) * mainVideo.duration);
+    const progressTime = videoTimeline.querySelector("span");
+    offsetX = offsetX < 20 ? 20 : (offsetX > timelineWidth - 20) ? timelineWidth - 20 : offsetX;
+    progressTime.style.left = `${offsetX}px`;
+    progressTime.innerText = formatTime(percent);
+});
+
+videoTimeline.addEventListener("click", e => {
+    let timelineWidth = videoTimeline.clientWidth;
+    mainVideo.currentTime = (e.offsetX / timelineWidth) * mainVideo.duration;
+});
+
+mainVideo.addEventListener("timeupdate", e => {
+    let {currentTime, duration} = e.target;
+    let percent = (currentTime / duration) * 100;
+    progressBar.style.width = `${percent}%`;
+    currentVidTime.innerText = formatTime(currentTime);
+});
+
+mainVideo.addEventListener("loadeddata", () => {
+    videoDuration.innerText = formatTime(mainVideo.duration);
+});
+
+const draggableProgressBar = e => {
+    let timelineWidth = videoTimeline.clientWidth;
+    progressBar.style.width = `${e.offsetX}px`;
+    mainVideo.currentTime = (e.offsetX / timelineWidth) * mainVideo.duration;
+    currentVidTime.innerText = formatTime(mainVideo.currentTime);
+}
+
+volumeBtn.addEventListener("click", () => {
+    if(!volumeBtn.classList.contains("fa-volume-high")) {
+        mainVideo.volume = 0.5;
+        volumeBtn.classList.replace("fa-volume-xmark", "fa-volume-high");
+    } else {
+        mainVideo.volume = 0.0;
+        volumeBtn.classList.replace("fa-volume-high", "fa-volume-xmark");
+    }
+    volumeSlider.value = mainVideo.volume;
+});
+
+volumeSlider.addEventListener("input", e => {
+    mainVideo.volume = e.target.value;
+    if(e.target.value == 0) {
+        return volumeBtn.classList.replace("fa-volume-high", "fa-volume-xmark");
+    }
+    volumeBtn.classList.replace("fa-volume-xmark", "fa-volume-high");
+});
+
+speedOptions.querySelectorAll("li").forEach(option => {
+    option.addEventListener("click", () => {
+        mainVideo.playbackRate = option.dataset.speed;
+        speedOptions.querySelector(".active").classList.remove("active");
+        option.classList.add("active");
+    });
+});
+
+document.addEventListener("click", e => {
+    if(e.target.tagName !== "SPAN" || e.target.className !== "material-symbols-rounded") {
+        speedOptions.classList.remove("show");
+    }
+});
+
+fullScreenBtn.addEventListener("click", () => {
+    container.classList.toggle("fullscreen");
+    if(document.fullscreenElement) {
+        fullScreenBtn.classList.replace("fa-compress", "fa-expand");
+        return document.exitFullscreen();
+    }
+    fullScreenBtn.classList.replace("fa-expand", "fa-compress");
+    container.requestFullscreen();
+});
+
+speedBtn.addEventListener("click", () => speedOptions.classList.toggle("show"));
+pipBtn.addEventListener("click", () => mainVideo.requestPictureInPicture());
+skipBackward.addEventListener("click", () => mainVideo.currentTime -= 5);
+skipForward.addEventListener("click", () => mainVideo.currentTime += 5);
+mainVideo.addEventListener("play", () => playPauseBtn.classList.replace("fa-play", "fa-pause"));
+mainVideo.addEventListener("pause", () => playPauseBtn.classList.replace("fa-pause", "fa-play"));
+playPauseBtn.addEventListener("click", () => mainVideo.paused ? mainVideo.play() : mainVideo.pause());
+videoTimeline.addEventListener("mousedown", () => videoTimeline.addEventListener("mousemove", draggableProgressBar));
+document.addEventListener("mouseup", () => videoTimeline.removeEventListener("mousemove", draggableProgressBar));
+</script>
+
+
+
