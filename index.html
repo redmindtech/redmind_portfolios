@@ -14,10 +14,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <nav style="background-color: #e73819;">
+      <div style="max-width: 1200px;margin: auto;padding: 1.5rem 1rem;display: flex;align-items: center;justify-content: space-between;">
+        <div><h1 style="color: aliceblue">REDMINDTECHNOLOGIES PORTFOLIO</h1></div>       
+      </div>
+    </nav>
+    <br>
     <section>
       <div class="row">
-        <h2 class="section-heading">REDMIND TECHNOLOGIES PORTFOLIO</h2>
-      </div>
+        <h2 class="section-heading">Our VR/AR projects</h2>
+      </div><br><br>
       <div class="row">
         <div class="column">
           <div class="card" id="med3d" onclick="med3d()">
@@ -63,15 +70,26 @@
             </p>
           </div>
         </div>
+        
+      </div>
+
+
+
+
+
+      <br><br>
+      <div class="row">
+        <h2 class="section-heading">Our Websites</h2>
+      </div><br><br>
+      <div class="row">
         <div class="column">
-          <div class="card">
+          <div class="card" id="yaazh" onclick="yaazh()">
             <div class="icon-wrapper">
-              <i class="fas fa-broom"></i>
+              <i class="fa fa-user-md" style="font-size: 45px;"></i>
             </div>
-            <h3>Service Heading</h3>
+            <h3>YAAZH PHYSIO WEBSITE</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
+              This is a website developed for Yaazh Physiotherapy. Appoinment bookings, mail enquiry, treatment details are some of the features added to this site.
             </p>
           </div>
         </div>
@@ -88,7 +106,14 @@
           </div>
         </div>
       </div>
+
     </section>
+
+    <br><br>
+    
+
+    
+    
   </body>
 </html>
 <script>
@@ -103,5 +128,8 @@ function threedinvite(){
 }
 function cripumps(){
   location.href='cripumps/cripumps.html';    
+}
+function yaazh(){
+  location.href='yaazh/yaazh.html';    
 }
 </script>
